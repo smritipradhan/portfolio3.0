@@ -1,0 +1,62 @@
+@import "../src/index.module.scss";
+
+.appContainer {
+  // background-color: black;
+  background: url("./assets/images/blaclback.avif");
+  scroll-behavior: smooth;
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
+  .header {
+    // background-color: #1a0b2e;
+    // background-color: black;
+    padding: 10px 100px 0px 0px;
+    color: white;
+    font-family: "Plus Jakarta Sans";
+    font-weight: 700;
+    // border-bottom: 0.1px solid white;
+    @include maxWidth(1080) {
+      padding: 10px 10px 0px 0px;
+    }
+
+    @include maxWidth(768) {
+      padding: 10px 10px 0px 0px;
+    }
+  }
+
+  .navigation {
+    display: flex;
+    justify-content: flex-end;
+    gap: 40px;
+    list-style-type: none;
+    flex-wrap: wrap;
+    cursor: pointer;
+    .navItem {
+      padding: 10px;
+      width: 100px;
+
+      border-bottom: 1px solid white;
+    }
+    .navItem:hover {
+      border-bottom: 1px solid #ab70e5;
+      border-top: 1px solid #ab70e5;
+      padding: 10px;
+      width: 100px;
+    }
+    .link {
+      text-decoration: none;
+      color: #ab70e5;
+    }
+    .notActive {
+      text-decoration: none;
+      color: white;
+    }
+    @include maxWidth(1080) {
+      justify-content: flex-start;
+      gap: 30px;
+    }
+  }
+}
+::-webkit-scrollbar {
+  display: none;
+}
